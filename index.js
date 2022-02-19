@@ -117,5 +117,5 @@ client.on('message',async message => {
 });
 
 
-client.login(process.env.token)
+client.login("ODY1Mzg1MzA0MzYwODc4MDkx.YPDO3g.L7tq3EFtc3BvxQPph61HMHZ8AhQ")
 // حقوق احمد / Ahmed
