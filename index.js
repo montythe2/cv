@@ -20,14 +20,14 @@ client.on("message", message => {
             if(!channel) return message.reply("**لانشاء روم التقديمات !!setsubmissions من فضلك اكتب الامر**")
             if(channel) {
               message.channel.send(message.author.username + '`1`').then((m)=>{
-            m.edit(message.channel.send + ', ناو').then( (m) =>{
+            m.edit(message.author.username + '       , ناو').then( (m) =>{
              m.channel.awaitMessages( m1 => m1.author == message.author,{ max: 1, time: 60*1000 } ).then ( (m1) => {
                   m1 = m1.first();
                   var name = m1.content;
                   m1.delete();
 
                   m.edit(message.author.username + '`2`').then( (m) =>{
-                      m.edit( message.author.username + ',ته‌مه‌ن ' )
+                      m.edit( message.author.username + '       ,ته‌مه‌ن ' )
                       setTimeout(() => {
                         m.delete()
                       }, 10000);
