@@ -16,7 +16,7 @@ client.on("message", message => {
   if(message.content.startsWith(prefix+"تقديم")) {// كلمة بدء التقديم
         if(!message.channel.guild) return;
                 if(message.author.bot) return;
-        let channel = message.guild.channels.cache.find(ch => ch.id === '890170468521345065')// اي دي روم التقديم
+        let channel = message.guild.channels.cache.find(ch => ch.id === '944514097234444329')// اي دي روم التقديم
             if(!channel) return message.reply("**لانشاء روم التقديمات !!setsubmissions من فضلك اكتب الامر**")
             if(channel) {
               message.channel.send(message.author.username + '`1`').then((m)=>{
@@ -96,7 +96,7 @@ client.on("message", message => {
           let mention = message.mentions.members.first();
           if(message.content.startsWith(prefix+"قبول")) {// امر القبول
           if(!message.channel.guild) return;
-          let acRoom = message.guild.channels.cache.find(ch => ch.id === '')// اي دي روم القبول
+          let acRoom = message.guild.channels.cache.find(ch => ch.id === '944514118583472158')// اي دي روم القبول
           if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return;
           if(!mention) return message.reply("الرجاء الإشارة");
          
@@ -108,7 +108,7 @@ client.on('message',async message => {
   let mention = message.mentions.members.first();
   if(message.content.startsWith(prefix+"رفض")) {// امر الرفض
   if(!message.channel.guild) return;
-  let acRoom = message.guild.channels.cache.find(ch => ch.id === '')// اي دي روم الرفض
+  let acRoom = message.guild.channels.cache.find(ch => ch.id === '944514118583472158')// اي دي روم الرفض
   if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return;
   if(!mention) return message.reply("الرجاء الإشارة");
  
