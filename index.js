@@ -64,7 +64,7 @@ client.on("message", message => {
                           let embed = new Discord.MessageEmbed()
                           .setAuthor(message.author.username, message.author.avatarURL) 
                           .setColor('GOLD')
-                        .setTitle(`\`تقديمك على الإدارة\` \n سوف يتم الرد عليك قريبا من الادارة , \n > ID: ${message.author.id}`)
+                        .setTitle(`\`فۆرمی بوون به‌ پلایه‌ر\` \n  تكه‌یه‌ ‌چاواریبكه‌ به‌ زووترین كات جوابت بۆدیته‌ا‌  , \n > ID: ${message.author.id}`)
                         .addField('> \`إسمك:\`', ` ** ${name} ** ` , true)
                         .addField('> \`عمرك:\`', ` ** ${age} ** ` , true)
                         .addField('> \`كم لك بالديسكورد:\`',`** ${ask} ** ` , true)
