@@ -20,14 +20,14 @@ client.on("message", message => {
             if(!channel) return message.reply("**لانشاء روم التقديمات !!setsubmissions من فضلك اكتب الامر**")
             if(channel) {
               message.channel.send(message.author.username + '`1`').then((m)=>{
-            m.edit(message.author.username + ', ما هو اسمك').then( (m) =>{
+            m.edit(message.author.username + ', ناو').then( (m) =>{
              m.channel.awaitMessages( m1 => m1.author == message.author,{ max: 1, time: 60*1000 } ).then ( (m1) => {
                   m1 = m1.first();
                   var name = m1.content;
                   m1.delete();
 
                   m.edit(message.author.username + '`2`').then( (m) =>{
-                      m.edit( message.author.username + ', كم عمرك ' )
+                      m.edit( message.author.username + ',ته‌مه‌ن ' )
                       setTimeout(() => {
                         m.delete()
                       }, 10000);
@@ -36,7 +36,7 @@ client.on("message", message => {
                           var age = m2.content;
                           m2.delete()
                           message.channel.send( message.author.username + '`3`').then( (m) =>{
-                            m.edit( message.author.username + ' كم لك بالديسكورد' )
+                            m.edit( message.author.username + ' ؟ ‎ماوەی چەندە لە دیسکۆردی' )
                             setTimeout(() => {
                               m.delete()
                             }, 10000);
@@ -45,7 +45,7 @@ client.on("message", message => {
                                 var ask = m3.content;
                                 m3.delete();
                                 message.channel.send( message.author.username + '`4`').then( (m) =>{
-                                  m.edit( message.author.username + ', لماذا تريد أن تصبح ضمن طاقم الإدارة ؟ !' )
+                                  m.edit( message.author.username + ', ‎چه‌نده‌؟  (kd) ئاستی یاری كردنت چۆنه‌ یان' )
                                   setTimeout(() => {
                                     m.delete()
                                   }, 10000);
@@ -54,23 +54,24 @@ client.on("message", message => {
                                       var ask2 = m4.content;
                                       m4.delete();
                                       message.channel.send(  message.author.username + '``5``').then( (m) =>{
-                                        m.edit( message.author.username + ', كم مدة تفاعلك' )
+                                        m.edit( message.author.username + ',؟ ‎ڕۆژانە دەتوانی بۆماوەی چەند ئەکتیڤ بی:' )
                                         m.channel.awaitMessages( m1 => m1.author == message.author,{ max: 1, time: 60*1000 } ).then ( (m5) => {
                                             m5 = m5.first();
                                             var ask3 = m5.content;
                                             m5.delete();
-                      m.edit( message.author.username + ', يتم إرسال البيانات').then( (mtime)=>{
+                      m.edit( message.author.username + ', ‎سیڤیەکەت نێردرا بەڕێزم:').then( (mtime)=>{
                         setTimeout(() => {
                           let embed = new Discord.MessageEmbed()
                           .setAuthor(message.author.username, message.author.avatarURL) 
                           .setColor('GOLD')
-                        .setTitle(`\`فۆرمی بوون به‌ پلایه‌ر\` \n  تكه‌یه‌ ‌چاواریبكه‌ به‌ زووترین كات جوابت بۆدیته‌ا‌  , \n > ID: ${message.author.id}`)
-                        .addField('> \`إسمك:\`', ` ** ${name} ** ` , true)
-                        .addField('> \`عمرك:\`', ` ** ${age} ** ` , true)
-                        .addField('> \`كم لك بالديسكورد:\`',`** ${ask} ** ` , true)
-                        .addField('> \` لماذا تريد أن تصبح ضمن طاقم الإدارة ؟:\` ',` ** ${ask2} ** ` , true)
-                        .addField('> \`مدة تفاعلك: ?\`',` ** ${ask3} ** ` , true)
-                        .addField('> __متى تم إنشاء حسابك: __',` \`${message.author.createdAt} \` ` , true)
+                        .setTitle(`\`سیڤی بوون به‌ پلایه‌ر\` \n  🙏‎تكه‌یه‌ چاوەڕێی ڕۆڵ بە دەستێک بە تا وەڵام دەدرێیتەوە
+‌ا‌  , \n > ID: ${message.author.id}`)
+                        .addField('> \`ناو:\`', ` ** ${name} ** ` , true)
+                        .addField('> \`ته‌مه‌ن:\`', ` ** ${age} ** ` , true)
+                        .addField('> \`؟‎ماوەی چەندە لە دیسکۆردی:\`',`** ${ask} ** ` , true)
+                        .addField('> \` ‎چه‌نده‌؟  (kd) ئاستی یاری كردنت چۆنه‌ یان :\` ',` ** ${ask2} ** ` , true)
+                        .addField('> \`‎ڕۆژانە دەتوانی بۆماوەی چەند ئەکتیڤ بی؟\`',` ** ${ask3} ** ` , true)
+                        .addField('> __ ‎سیڤیەکەت نێردرا بەڕێزم: __',` \`${message.author.createdAt} \` ` , true)
                         channel.send(embed)
                         }, 2500);
                         setTimeout(() => {
