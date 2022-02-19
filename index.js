@@ -13,7 +13,7 @@ const client = new Discord.Client();
 const prefix = "."; // بادئة البوت
 // كود تقديم ادارة
 client.on("message", message => { 
-  if(message.content.startsWith(prefix+"تقديم")) {// كلمة بدء التقديم
+  if(message.content.startsWith(prefix+"cv")) {// كلمة بدء التقديم
         if(!message.channel.guild) return;
                 if(message.author.bot) return;
         let channel = message.guild.channels.cache.find(ch => ch.id === '944514097234444329')// اي دي روم التقديم
@@ -94,7 +94,7 @@ client.on("message", message => {
         });
         client.on('message',async message => {
           let mention = message.mentions.members.first();
-          if(message.content.startsWith(prefix+"قبول")) {// امر القبول
+          if(message.content.startsWith(prefix+"yas")) {// امر القبول
           if(!message.channel.guild) return;
           let acRoom = message.guild.channels.cache.find(ch => ch.id === '944514118583472158')// اي دي روم القبول
           if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return;
@@ -106,7 +106,7 @@ client.on("message", message => {
 
 client.on('message',async message => {
   let mention = message.mentions.members.first();
-  if(message.content.startsWith(prefix+"رفض")) {// امر الرفض
+  if(message.content.startsWith(prefix+"no")) {// امر الرفض
   if(!message.channel.guild) return;
   let acRoom = message.guild.channels.cache.find(ch => ch.id === '944514118583472158')// اي دي روم الرفض
   if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return;
